@@ -1,0 +1,24 @@
+Many more of the control codes have been given meanings quite different from their original ones. The "escape" 
+character (ESC, code 27), for example, was intended originally to allow sending other control characters as literals 
+instead of invoking their meaning. This is the same meaning of "escape" encountered in URL encodings, C language strings, 
+and other systems where certain characters have a reserved meaning. Over time this meaning has been co-opted and has eventually 
+been changed. In modern use, an ESC sent to the terminal usually indicates the start of a command sequence usually in the form of 
+a so-called "ANSI escape code" (or, more properly, a "Control Sequence Introducer") from ECMA-48 (1972) and its successors,
+ beginning with ESC followed by a "[" (left-bracket) character. An ESC sent from the terminal is most often used as an out-of-band 
+ character used to terminate an operation, as in the TECO and vi text editors. In graphical user interface (GUI) and windowing 
+ systems, ESC generally causes an application to abort its current operation or to exit (terminate) altogether.
+The inherent ambiguity of many control characters, combined with their historical usage, created problems when transferring 
+"plain text" files between systems. The best example of this is the newline problem on various operating systems. Teletype machines 
+required that a line of text be terminated with both "Carriage Return" (which moves the printhead to the beginning of the line) and 
+"Line Feed" (which advances the paper one line without moving the printhead). The name "Carriage Return" comes from the fact that on
+ a manual typewriter the carriage holding the paper moved while the position where the typebars struck the ribbon remained stationary.
+ e entire carriage had to be pushed (returned) to the right in order to position the left margin of the paper for the next line.
+DEC operating systems (OS/8, RT-11, RSX-11, RSTS, TOPS-10, etc.) used both characters to mark the end of a line so that the console 
+device (originally Teletype machines) would work. By the time so-called "glass TTYs" (later called CRTs or terminals) came along, the 
+ention was so well established that backward compatibility necessitated continuing the convention. When Gary Kildall created CP/M he 
+was inspired by some command line interface conventions used in DEC's RT-11. Until the introduction of PC DOS in 1981, IBM had no hand 
+in this because their 1970s operating systems used EBCDIC instead of ASCII and they were oriented toward punch-card input and line printer
+ output on which the concept of carriage return was meaningless. IBM's PC DOS (also marketed as MS-DOS by Microsoft) inherited the convention 
+ by virtue of being loosely based on CP/M,[36] and Windows inherited it from MS-DOS. 
+
+ -Source wiki
